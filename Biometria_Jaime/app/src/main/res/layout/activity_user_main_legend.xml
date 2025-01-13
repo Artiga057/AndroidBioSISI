@@ -1,0 +1,38 @@
+<LinearLayout android:id="@+id/ll_legend"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_background_white"
+    android:padding="8dp"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="16dp"
+    android:layout_alignParentEnd="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correcto"
+        android:textColor="#008000"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_correct"
+        android:drawablePadding="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regular"
+        android:textColor="#FFA500"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_warning"
+        android:drawablePadding="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peligro"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_danger"
+        android:drawablePadding="8dp" />
+</LinearLayout>

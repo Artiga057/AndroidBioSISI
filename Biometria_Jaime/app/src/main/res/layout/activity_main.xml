@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/botonBuscarDispositivosBTLE"
+        android:text="Buscar Dispositivos BTLE nou 4"
+        android:onClick="botonBuscarDispositivosBTLEPulsado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/botonDetenerBusquedaDispositivosBTLE"
+        android:text="Detener búsaqueda Dispositivos BTLE"
+        android:onClick="botonDetenerBusquedaDispositivosBTLEPulsado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/botonBuscarNuestroDispositivoBTLE"
+        android:text="Buscar nuestro dispositivo  BTLE"
+        android:onClick="botonBuscarNuestroDispositivoBTLEPulsado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="Calcular Distancia al sensor" />
+
+    <TextView
+        android:id="@+id/distanciavalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCalcular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Distancia al sensor"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnEstado1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="Estado" />
+    <Button
+        android:id="@+id/btnScanQr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escanear QR"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/distanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distancia: 0.00 km"
+            android:textSize="24sp"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/buttonDistancia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distancia Recorrida" />
+    </LinearLayout>
+
+</android.widget.LinearLayout>

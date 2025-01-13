@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".UserMainActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#336699">
+
+        <LinearLayout
+            android:id="@+id/temperature_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_temperature"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_temperature"
+                android:contentDescription="Temperatura" />
+
+            <TextView
+                android:id="@+id/tv_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="18°C"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_user"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_user"
+                android:contentDescription="Usuario" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/co_ppm_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_co_ppm"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_co"
+                android:contentDescription="Contaminación" />
+
+            <TextView
+                android:id="@+id/tv_co_ppm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="1.1 ppm"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/header"
+        android:layout_above="@id/footer" />
+
+    <ImageButton
+        android:id="@+id/btn_legend_toggle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_arrow_right"
+        android:background="@drawable/rounded_button"
+        android:elevation="4dp" />
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_background_white"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/footer_title"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="Gases contaminantes"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/footer_title"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_ozone"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Ozono"
+                android:backgroundTint="#89CFF0"
+                android:textColor="#FFFFFF"
+                android:layout_marginHorizontal="4dp" />
+
+            <Button
+                android:id="@+id/btn_co"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="CO"
+                android:backgroundTint="#89CFF0"
+                android:textColor="#FFFFFF"
+                android:layout_marginHorizontal="4dp" />
+
+            <Button
+                android:id="@+id/btn_so2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="SO2"
+                android:backgroundTint="#89CFF0"
+                android:textColor="#FFFFFF"
+                android:layout_marginHorizontal="4dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
